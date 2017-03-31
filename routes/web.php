@@ -17,9 +17,8 @@
 
 Route::get('/', function(){
 
-    // return 'HEY YOU TETING ONYL';
-
-    $tasks = DB::table('tasks')->get();
-    return view('welcome', compact('tasks'));
+    $tasks = App\Task::pluck('body');
+    return $tasks;
+    // return view('welcome', compact('tasks'));
 
 });
