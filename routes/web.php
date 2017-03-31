@@ -20,7 +20,6 @@ Route::get('/', function(){
     // return 'HEY YOU TETING ONYL';
 
     $tasks = DB::table('tasks')->get();
-    return $tasks;
     return view('welcome', compact('tasks'));
 
 });
